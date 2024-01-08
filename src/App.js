@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Sidebar from "./components/Sidebar/Sidebar";
+import { Routes,Route,BrowserRouter } from 'react-router-dom';
+import Detail from "./components/Detail/Detail";
+import Home from "./components/Home/Home";
+import Items from "./components/Items/Items";
+import Custom from './components/Custom/Custom';
+import FoodDetail from "./components/FoodDetail/FoodDetail";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+          <Home />
+        <Routes >
+            <Route path="/" element={<Items />}/>
+            <Route path="/search/:id" element={<Custom/>}/>
+            <Route path="/meal/category/:id" element={<Detail/>}/>
+            <Route path="meal/detail/:id" element ={<FoodDetail />} />
+        </Routes>
+        <Sidebar />
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

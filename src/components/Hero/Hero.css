@@ -1,0 +1,54 @@
+.hero{
+    background: url("https://png.pngtree.com/background/20230612/original/pngtree-more-than-500-fruits-and-vegetables-on-a-wooden-table-picture-image_3176236.jpg");
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0.95;
+    gap:20px;
+}
+
+.hero >div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    gap:20px;
+}
+
+.hero .inpt-btn input{
+    height:45px;
+    width:350px;
+    border-radius: 25px;
+    border: 1px solid white;
+    padding: 0px 10px;
+}
+
+.hero .inpt-btn input:hover{
+    border: 2px solid black;
+}
+
+.hero .inpt-btn .btn{
+    background-color:#e95308;
+    border:1px solid white;
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    padding: 5px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero .inpt-btn .btn:hover{
+    opacity: 0.85;
+    transform: scale(0.95);
+}
+
+.hero .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
